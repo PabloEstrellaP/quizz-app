@@ -47,7 +47,7 @@ function shuffle(array) {
 
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
 
   return shuffled
@@ -129,18 +129,12 @@ onMounted(startQuiz)
   <main class="page">
     <section v-if="currentQuestion" class="quiz-card">
       <header class="quiz-header">
-        <button
-          class="back-button"
-          type="button"
-          aria-label="Volver al inicio"
-          @click="router.push({ name: 'home' })"
-        >
+        <button class="back-button" type="button" aria-label="Volver al inicio" @click="router.push({ name: 'home' })">
           ←
         </button>
 
         <div class="quiz-brand">
-          <span class="brand-icon">Q</span>
-          <span>Quiz App</span>
+          <img src="/public/tlami_color_borde.png" class="cLogo_quizz">
         </div>
 
         <span class="question-counter">
@@ -148,18 +142,9 @@ onMounted(startQuiz)
         </span>
       </header>
 
-      <div
-        class="progress-track"
-        role="progressbar"
-        :aria-valuenow="currentIndex + 1"
-        :aria-valuemin="1"
-        :aria-valuemax="quizQuestions.length"
-        :aria-label="`Pregunta ${currentIndex + 1} de ${quizQuestions.length}`"
-      >
-        <div
-          class="progress-fill"
-          :style="{ width: `${progress}%` }"
-        ></div>
+      <div class="progress-track" role="progressbar" :aria-valuenow="currentIndex + 1" :aria-valuemin="1"
+        :aria-valuemax="quizQuestions.length" :aria-label="`Pregunta ${currentIndex + 1} de ${quizQuestions.length}`">
+        <div class="progress-fill" :style="{ width: `${progress}%` }"></div>
       </div>
 
       <div class="quiz-content">
@@ -176,59 +161,39 @@ onMounted(startQuiz)
         </p>
 
         <div class="answers-list">
-          <button
-            v-for="(answer, index) in currentQuestion.answers"
-            :key="answer.id"
-            class="answer-option"
-            :class="{
-              'answer-correct': answered && answer.correct,
-              'answer-incorrect':
-                answered &&
-                selectedAnswer === answer.id &&
-                !answer.correct,
-              'answer-muted':
-                answered &&
-                selectedAnswer !== answer.id &&
-                !answer.correct,
-            }"
-            :disabled="answered"
-            :aria-pressed="selectedAnswer === answer.id"
-            @click="selectAnswer(answer)"
-          >
+          <button v-for="(answer, index) in currentQuestion.answers" :key="answer.id" class="answer-option" :class="{
+            'answer-correct': answered && answer.correct,
+            'answer-incorrect':
+              answered &&
+              selectedAnswer === answer.id &&
+              !answer.correct,
+            'answer-muted':
+              answered &&
+              selectedAnswer !== answer.id &&
+              !answer.correct,
+          }" :disabled="answered" :aria-pressed="selectedAnswer === answer.id" @click="selectAnswer(answer)">
             <span class="answer-letter">
               {{ String.fromCharCode(65 + index) }}
             </span>
 
             <span class="answer-text">{{ answer.text }}</span>
 
-            <span
-              v-if="answered && answer.correct"
-              class="answer-status"
-              aria-label="Respuesta correcta"
-            >
+            <span v-if="answered && answer.correct" class="answer-status" aria-label="Respuesta correcta">
               ✓
             </span>
 
-            <span
-              v-else-if="
-                answered &&
-                selectedAnswer === answer.id &&
-                !answer.correct
-              "
-              class="answer-status"
-              aria-label="Respuesta incorrecta"
-            >
+            <span v-else-if="
+              answered &&
+              selectedAnswer === answer.id &&
+              !answer.correct
+            " class="answer-status" aria-label="Respuesta incorrecta">
               ×
             </span>
           </button>
         </div>
 
-        <section
-          v-if="answered"
-          class="feedback-panel"
-          :class="isCorrect ? 'feedback-success' : 'feedback-error'"
-          aria-live="polite"
-        >
+        <section v-if="answered" class="feedback-panel" :class="isCorrect ? 'feedback-success' : 'feedback-error'"
+          aria-live="polite">
           <div class="feedback-heading">
             <span>{{ isCorrect ? '✓' : '✕' }}</span>
             <strong>
@@ -246,11 +211,7 @@ onMounted(startQuiz)
           </p>
         </section>
 
-        <button
-          v-if="answered"
-          class="primary-button next-button"
-          @click="nextQuestion"
-        >
+        <button v-if="answered" class="primary-button next-button" @click="nextQuestion">
           {{ isLastQuestion ? 'Ver resultados' : 'Siguiente pregunta' }}
           <span class="button-arrow">→</span>
         </button>

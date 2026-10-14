@@ -32,9 +32,10 @@ function iniciar() {
         ←
       </button>
 
-      <div class="form-illustration">
-        <span>👋</span>
-      </div>
+       <div class="hero-decoration">
+         <img src="/public/logo.png" class="cLogo">
+        </div>
+
 
       <span class="eyebrow">ANTES DE COMENZAR</span>
 

@@ -8,7 +8,7 @@
 :root {
   font-family: 'DM Sans', sans-serif;
   color: #29243b;
-  background: #f7f5fc;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -72,6 +72,12 @@ input {
 #app {
   min-height: 100vh;
   min-height: 100dvh;
+}
+
+main.page {
+  background: url(./background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ========================================
@@ -227,19 +233,31 @@ h1 span {
   overflow: hidden;
 }
 
-.hero {
+/*.hero {
   padding-top: 25px;
+}*/
+
+.cLogo {
+  width: 100%;
+}
+
+.cLogo_quizz {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .hero-decoration {
   position: relative;
-  height: 190px;
+  /*height: 190px;*/
   display: grid;
   place-items: center;
   margin-bottom: 28px;
   overflow: hidden;
   border-radius: 23px;
-  background: linear-gradient(135deg, #eee7ff, #fce9f4);
+  /*background: linear-gradient(135deg, #eee7ff, #fce9f4);*/
 }
 
 .decoration-circle {
@@ -321,9 +339,9 @@ h1 span {
    6. REGISTRO DEL PARTICIPANTE
 ======================================== */
 
-.back-button {
+/*.back-button {
   margin-bottom: 24px;
-}
+}*/
 
 .form-illustration {
   width: 68px;
@@ -720,7 +738,7 @@ h1 span {
   }
 
   .hero-decoration {
-    height: 170px;
+    /*height: 170px;*/
   }
 
   .form-card {

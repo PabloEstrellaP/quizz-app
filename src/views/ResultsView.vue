@@ -43,7 +43,7 @@ function goHome() {
 <template>
   <main class="page">
     <section v-if="result" class="form-card results-card">
-      <div class="form-illustration">🎉</div>
+      <img src="/public/tlami_color_borde.png" class="cLogo_quizz">
 
       <span class="eyebrow">CUESTIONARIO COMPLETADO</span>
 

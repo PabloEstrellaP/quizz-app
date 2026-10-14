@@ -11,18 +11,10 @@ function comenzar() {
 <template>
   <main class="page">
     <section class="welcome-card">
-      <div class="brand">
-        <div class="brand-icon">Q</div>
-        <span>Quiz App</span>
-      </div>
 
       <div class="hero">
         <div class="hero-decoration">
-          <div class="decoration-circle circle-one"></div>
-          <div class="decoration-circle circle-two"></div>
-          <div class="hero-symbol">✳</div>
-          <div class="floating-card floating-card-one">A+</div>
-          <div class="floating-card floating-card-two">✓</div>
+         <img src="/public/logo.png" class="cLogo">
         </div>
 
         <span class="eyebrow">TU MOMENTO DE DEMOSTRARLO</span>
