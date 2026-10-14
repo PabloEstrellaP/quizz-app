@@ -21,9 +21,9 @@ function iniciar() {
 </script>
 
 <template>
-  <main class="page">
+  <main class="page" style="display: flex; flex-direction: column;">
+    <img src="/public/logo__.png" loading="lazy" alt="Footer" class="cLogo" style="transform: translateY(15%); position: relative; z-index: 5;">
     <section class="form-card">
-      <img src="/public/logo__.png" loading="lazy" alt="Footer" class="cHeader_">
       <button
         class="back-button"
         type="button"
