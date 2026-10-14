@@ -7,7 +7,7 @@ const router = useRouter()
 
 const TOTAL_QUESTIONS = 5
 
-const participant = sessionStorage.getItem('quiz_participant')
+const participant = sessionStorage.getItem('quiz_participant') || 'Participante'
 
 const quizQuestions = ref([])
 const currentIndex = ref(0)
@@ -54,10 +54,6 @@ function shuffle(array) {
 }
 
 function startQuiz() {
-  if (!participant?.trim()) {
-    router.replace({ name: 'participant' })
-    return
-  }
 
   if (questions.length < TOTAL_QUESTIONS) {
     router.replace({ name: 'home' })
