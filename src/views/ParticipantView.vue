@@ -22,7 +22,7 @@ function iniciar() {
 
 <template>
   <main class="page" style="display: flex; flex-direction: column;">
-    <img src="/public/logo__.png" loading="lazy" alt="Footer" class="cLogo" style="transform: translateY(15%); position: relative; z-index: 5;">
+    <img src="/public/logo__.png" loading="lazy" alt="Footer" class="cLogo cLogo__Reponsive" style="transform: translateY(15%); position: relative; z-index: 5;">
     <section class="form-card">
       <button
         class="back-button"

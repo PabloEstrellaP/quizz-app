@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* ========================================
@@ -8,7 +7,7 @@
 :root {
   font-family: 'DM Sans', sans-serif;
   color: #29243b;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -76,8 +75,8 @@ input {
 
 main.page {
   background: url(/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ========================================
@@ -120,9 +119,11 @@ main.page {
   z-index: 5;
 }
 
-.cHeader__  {
+.cHeader__ {
   width: 100%;
 }
+
+
 
 .welcome-card,
 .form-card {
@@ -234,7 +235,7 @@ h1 span {
   font-size: 23px;
   transition: background 0.2s ease;
   z-index: 10;
-position: relative;
+  position: relative;
 }
 
 .back-button:hover {
@@ -275,6 +276,10 @@ position: relative;
   margin-right: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.cLogo__Reponsive {
+  width: 40%;
 }
 
 .hero-decoration {
@@ -345,7 +350,7 @@ position: relative;
   transform: rotate(10deg);
 }
 
-.hero > p {
+.hero>p {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
@@ -730,7 +735,7 @@ position: relative;
   color: var(--text);
 }
 
-.placeholder-card > .primary-button {
+.placeholder-card>.primary-button {
   margin-top: 28px;
 }
 
@@ -759,11 +764,12 @@ position: relative;
     padding: 14px;
   }
 
+
   .welcome-card,
   .form-card {
     border-radius: 24px;
     padding: 23px;
-    
+
   }
 
   .hero-decoration {
@@ -796,11 +802,20 @@ position: relative;
   }
 }
 
+@media (max-width: 767px) {
+  .cLogo__Reponsive {
+    width: 100%;
+  }
+}
+
 /* ========================================
    12. ACCESIBILIDAD
 ======================================== */
 
+
+
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
