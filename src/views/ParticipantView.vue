@@ -23,6 +23,7 @@ function iniciar() {
 <template>
   <main class="page">
     <section class="form-card">
+      <img src="/public/logo__.png" loading="lazy" alt="Footer" class="cHeader_">
       <button
         class="back-button"
         type="button"
@@ -33,13 +34,8 @@ function iniciar() {
       </button>
 
        <div class="hero-decoration">
-         <img src="/public/logo.png" class="cLogo">
+         <img src="/public/before-start.png" class="cLogo_">
         </div>
-
-
-      <span class="eyebrow">ANTES DE COMENZAR</span>
-
-      <h1>¡Hola! ¿Cómo te llamas?</h1>
 
       <p class="description">
         Queremos saber quién está participando.
@@ -74,6 +70,7 @@ function iniciar() {
       <p class="footer-note">
         Tus respuestas se procesarán localmente en esta versión.
       </p>
+      <img src="/public/footer__.png" loading="lazy" alt="Footer" class="cFooter_">
     </section>
   </main>
 </template>

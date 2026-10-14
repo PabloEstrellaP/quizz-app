@@ -11,10 +11,11 @@ function comenzar() {
 <template>
   <main class="page">
     <section class="welcome-card">
-
+      <!--<img src="/public/logo__.png" loading="lazy" alt="Footer" class="cHeader_">-->
+      
       <div class="hero">
         <div class="hero-decoration">
-         <img src="/public/logo.png" class="cLogo">
+         <img src="/public/logo__.png" class="cLogo">
         </div>
 
         <span class="eyebrow">TU MOMENTO DE DEMOSTRARLO</span>
@@ -40,6 +41,8 @@ function comenzar() {
           Una pregunta a la vez. Tú puedes.
         </p>
       </div>
+
+      <img src="/public/footer__.png" loading="lazy" alt="Footer" class="cFooter_">
     </section>
   </main>
 </template>

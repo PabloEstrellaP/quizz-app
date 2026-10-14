@@ -202,12 +202,12 @@ onMounted(startQuiz)
           </div>
 
           <p v-if="isCorrect">
-            ¡Correcto! Elegiste la respuesta adecuada.
+            ¡Buen trabajo! Elegiste la respuesta correcta. Sigue así.
           </p>
 
           <p v-else>
-            La respuesta correcta es:
-            <strong>{{ correctAnswer.text }}</strong>
+            Casi lo logras. Revisa la pregunta con calma e inténtalo de nuevo.
+            <!--<strong>{{ correctAnswer.text }}</strong>-->
           </p>
         </section>
 
@@ -219,6 +219,8 @@ onMounted(startQuiz)
         <p v-else class="quiz-hint">
           Elige una respuesta para continuar.
         </p>
+
+        <!--<img src="/public/footer__.png" loading="lazy" alt="Footer" class="cFooter_">-->
       </div>
     </section>
 

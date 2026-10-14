@@ -100,6 +100,28 @@ main.page {
   border: 1px solid rgba(118, 86, 232, 0.08);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.cFooter_ {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 65%);
+}
+
+.cHeader_ {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  z-index: 5;
+}
+
+.cHeader__  {
+  width: 100%;
 }
 
 .welcome-card,
@@ -211,6 +233,8 @@ h1 span {
   color: var(--text);
   font-size: 23px;
   transition: background 0.2s ease;
+  z-index: 10;
+position: relative;
 }
 
 .back-button:hover {
@@ -230,7 +254,7 @@ h1 span {
 
 .welcome-card {
   padding: 28px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 /*.hero {
@@ -238,7 +262,11 @@ h1 span {
 }*/
 
 .cLogo {
-  width: 70%;
+  width: 95%;
+}
+
+.cLogo_ {
+  width: 90%;
 }
 
 .cLogo_quizz {
@@ -735,6 +763,7 @@ h1 span {
   .form-card {
     border-radius: 24px;
     padding: 23px;
+    
   }
 
   .hero-decoration {
